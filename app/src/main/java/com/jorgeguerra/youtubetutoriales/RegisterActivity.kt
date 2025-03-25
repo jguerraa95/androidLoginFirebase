@@ -29,7 +29,6 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
-import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -49,7 +48,6 @@ import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
-import com.google.common.io.Files.append
 import com.google.firebase.FirebaseApp
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.analytics.ktx.analytics
@@ -61,7 +59,9 @@ import com.jorgeguerra.youtubetutoriales.ui.theme.Verde
 import com.jorgeguerra.youtubetutoriales.ui.theme.YoutubeTutorialesTheme
 import com.jorgeguerra.youtubetutoriales.ui.theme.miFont
 
-class MainActivity : ComponentActivity() {
+@Suppress("DEPRECATION")
+class RegisterActivity : ComponentActivity() {
+
     private lateinit var analytics: FirebaseAnalytics
     private lateinit var auth: FirebaseAuth
     private lateinit var googleSignInClient: GoogleSignInClient
@@ -204,7 +204,7 @@ class MainActivity : ComponentActivity() {
                         }
                         Spacer(modifier = Modifier.height(8.dp))
                         TextButton(
-                            onClick = { startActivity(Intent(this@MainActivity, LoginActivity::class.java)) }
+                            onClick = { startActivity(Intent(this@RegisterActivity, LoginActivity::class.java)) }
                         ) {
                             val annotatedString = buildAnnotatedString {
                                 append("¿Ya tienes cuenta? Ingresa sesión ")

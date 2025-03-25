@@ -25,7 +25,6 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -195,7 +194,7 @@ class LoginActivity : ComponentActivity() {
                     Spacer(Modifier.height(5.dp))
                     TextButton(
                         modifier = Modifier.padding(bottom = 10.dp).height(50.dp) ,
-                        onClick = { startActivity(Intent(this@LoginActivity, MainActivity::class.java)) }
+                        onClick = { startActivity(Intent(this@LoginActivity, RegisterActivity::class.java)) }
                     ) {
                         val annotatedString = buildAnnotatedString {
                             append("¿Aun no tienes cuenta? Registrate ")

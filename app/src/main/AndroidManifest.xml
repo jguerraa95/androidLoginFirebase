@@ -24,7 +24,7 @@
             android:label="@string/title_activity_login"
             android:theme="@style/Theme.YoutubeTutoriales" />
         <activity
-            android:name=".MainActivity"
+            android:name=".RegisterActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.YoutubeTutoriales">

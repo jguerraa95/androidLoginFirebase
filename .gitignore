@@ -21,3 +21,4 @@ local.properties
 /app/debug/
 .idea/
 *.log
+/app/google-services.json
